@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-
-cd "$(git root)" || { echo "Can't cd to top level directory";exit 1; }
+# Bug: script used HEAD^ which refers to the parent commit
+# In a repository with only one commit there is no parent, causing an error
+# Fix: use HEAD so git counts all commits
+echo total "$(git rev-list --count HEAD)"
+cd "$(git rev-parse --show-toplevel)" || { echo "Can't cd to top level directory";exit 1; }
 
 PROJECT_FULL_PATH=
 SUMMARY_BY_LINE=

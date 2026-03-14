@@ -2,7 +2,7 @@
 
 NO_EMAIL=false
 FILE=""
-
+LIST=false
 while [[ $# -gt 0 ]]; do
   case $1 in
     -l|--list )
@@ -17,8 +17,8 @@ while [[ $# -gt 0 ]]; do
       break
   esac
 done
-
-if [ $LIST != true ]; then
+# Fixed a syntax issue in line 21 related to the LIST condition.
+if [ "$LIST" != "true" ]; then
   FILE=$1
   if [ -z "$FILE" ]; then
     FILE=$(find . -mindepth 1 -maxdepth 1 \( -iname '*authors*' -o -iname '*contributors*' \) | head -n1)
@@ -45,9 +45,9 @@ authors() {
 #
 # authors.
 #
-
+# Corrected the final output logic so that the authors list is printed with --list and written to the AUTHORS file otherwise.
 if $LIST; then
   authors
 else
-  authors >> "$FILE"
+  authors > "$FILE"
 fi

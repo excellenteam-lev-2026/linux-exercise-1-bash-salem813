@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+# Bug: the script used a helper command that was not available in this environment.
+# This caused the temporary file creation step to fail at runtime.
+# Fix: replaced it with a standard command that creates a temporary file correctly.
 
-tmp=$(git_extra_mktemp)
+tmp=$(mktemp)
 above=0
 # if the output won't be printed to tty, disable the color
 test -t 1 && to_tty=true

@@ -4,5 +4,8 @@ if test "$1" = "--all"; then
   git shortlog -n -s | awk '{print substr($0,index($0,$2)) " (" $1 ")"}'
   echo
 fi
-
-echo total "$(git rev-list --count HEAD^)"
+# Bug: script used HEAD^ which refers to the parent commit
+# In a repository with only one commit there is no parent, causing an error
+# Fix: use HEAD so git counts all commits
+echo total "$(git rev-list --count HEAD)"
+echo total "$(git rev-list --count HEAD)"
