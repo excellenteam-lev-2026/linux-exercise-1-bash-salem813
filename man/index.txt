@@ -76,3 +76,4 @@ git-unlock(1) git-unlock
 git-unwip(1) git-unwip
 git-utimes(1) git-utimes
 git-wip(1) git-wip
+git-recent-committers
