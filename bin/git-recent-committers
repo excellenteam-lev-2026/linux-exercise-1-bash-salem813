@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+DAYS="$GIT_RECENT_COMMITTERS_DAYS"
+
+if [ -z "$DAYS" ]; then
+    DAYS=7
+fi
+
+# check if DAYS is number
+if ! [[ "$DAYS" =~ ^[0-9]+$ ]]; then
+    echo "days must be a number" >&2
+    exit 1
+fi
+
+# check if inside git repo
+git rev-parse --is-inside-work-tree > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "not a git repo" >&2
+    exit 1
+fi
+
+git log --since="$DAYS days ago" --pretty="%an" | sort | uniq -c | sort -nr
+
