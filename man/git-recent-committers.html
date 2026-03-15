@@ -3,9 +3,7 @@
 <head>
   <meta http-equiv='content-type' content='text/html;charset=utf8'>
   <meta name='generator' content='Ronn-NG/v0.9.1 (http://github.com/apjanke/ronn-ng/tree/0.9.1)'>
-  <title>&lt;p&gt;% git-recent-committers(1)&lt;/p&gt;
-
-NAME</title>
+  <title>git-recent-committers(1) - show committers who made commits in the last N days</title>
   <style type='text/css' media='all'>
   /* style: man */
   body#manpage {margin:0}
@@ -55,43 +53,61 @@ NAME</title>
   <div class='mp' id='man'>
 
   <div class='man-navigation' style='display:none'>
+    <a href="#NAME">NAME</a>
+    <a href="#SYNOPSIS">SYNOPSIS</a>
+    <a href="#DESCRIPTION">DESCRIPTION</a>
+    <a href="#EXAMPLES">EXAMPLES</a>
+    <a href="#AUTHOR">AUTHOR</a>
+    <a href="#REPORTING-BUGS">REPORTING BUGS</a>
+    <a href="#SEE-ALSO">SEE ALSO</a>
   </div>
 
   <ol class='man-decor man-head man head'>
-    <li class='tl'>git-recent-committers</li>
+    <li class='tl'>git-recent-committers(1)</li>
     <li class='tc'>Git Extras</li>
-    <li class='tr'>git-recent-committers</li>
+    <li class='tr'>git-recent-committers(1)</li>
   </ol>
 
   
 
-<h1 id=""></h1>
-<p>% <a class="man-ref" href="git-recent-committers.html">git-recent-committers<span class="s">(1)</span></a></p>
+<h2 id="NAME">NAME</h2>
+<p class="man-name">
+  <code>git-recent-committers</code> - <span class="man-whatis">show committers who made commits in the last N days</span>
+</p>
+<h2 id="SYNOPSIS">SYNOPSIS</h2>
 
-NAME<p>git-recent-committers - show committers who made commits in the last N days</p>
+<p>git-recent-committers</p>
 
-<h1 id="SYNOPSIS">SYNOPSIS</h1>
+<h2 id="DESCRIPTION">DESCRIPTION</h2>
+
+<p>Shows authors who made at least one commit in the last N days, together with
+the number of commits they made in that period.</p>
+
+<p>The default number of days can be controlled with the
+GIT_RECENT_COMMITTERS_DAYS environment variable.</p>
+
+<h2 id="EXAMPLES">EXAMPLES</h2>
 
 <p>git recent-committers</p>
 
-<h1 id="DESCRIPTION">DESCRIPTION</h1>
+<p>GIT_RECENT_COMMITTERS_DAYS=30 git recent-committers</p>
 
-<p>Shows authors who made at least one commit in the last N days, together with the
-number of commits they made in that period.</p>
+<h2 id="AUTHOR">AUTHOR</h2>
 
-<p>The default number of days can be controlled with the
-<code>GIT_RECENT_COMMITTERS_DAYS</code> environment variable.</p>
+<p>Written by Salem</p>
 
-<h1 id="EXAMPLES">EXAMPLES</h1>
+<h2 id="REPORTING-BUGS">REPORTING BUGS</h2>
 
-<p><code>git recent-committers</code></p>
+<p>https://github.com/tj/git-extras/issues</p>
 
-<p><code>GIT_RECENT_COMMITTERS_DAYS=30 git recent-committers</code></p>
+<h2 id="SEE-ALSO">SEE ALSO</h2>
+
+<p>https://github.com/tj/git-extras</p>
 
   <ol class='man-decor man-foot man foot'>
     <li class='tl'></li>
     <li class='tc'>March 2026</li>
-    <li class='tr'>git-recent-committers</li>
+    <li class='tr'>git-recent-committers(1)</li>
   </ol>
 
   </div>

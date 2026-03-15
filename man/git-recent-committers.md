@@ -1,23 +1,32 @@
-% git-recent-committers(1)
+git-recent-committers(1) -- show committers who made commits in the last N days
+===========================================================================
 
-# NAME
+## SYNOPSIS
 
-git-recent-committers - show committers who made commits in the last N days
+git-recent-committers
 
-# SYNOPSIS
+## DESCRIPTION
+
+Shows authors who made at least one commit in the last N days, together with
+the number of commits they made in that period.
+
+The default number of days can be controlled with the
+GIT_RECENT_COMMITTERS_DAYS environment variable.
+
+## EXAMPLES
 
 git recent-committers
 
-# DESCRIPTION
+GIT_RECENT_COMMITTERS_DAYS=30 git recent-committers
 
-Shows authors who made at least one commit in the last N days, together with the
-number of commits they made in that period.
+## AUTHOR
 
-The default number of days can be controlled with the
-`GIT_RECENT_COMMITTERS_DAYS` environment variable.
+Written by Salem
 
-# EXAMPLES
+## REPORTING BUGS
 
-`git recent-committers`
+https://github.com/tj/git-extras/issues
 
-`GIT_RECENT_COMMITTERS_DAYS=30 git recent-committers`
+## SEE ALSO
+
+https://github.com/tj/git-extras

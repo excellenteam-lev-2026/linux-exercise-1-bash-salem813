@@ -1,10 +1,21 @@
 .\" generated with Ronn-NG/v0.9.1
 .\" http://github.com/apjanke/ronn-ng/tree/0.9.1
-.TH "GIT\-RECENT\-COMMITTERS" "" "March 2026" "" "Git Extras"
-% git\-recent\-committers(1)NAME
+.TH "GIT\-RECENT\-COMMITTERS" "1" "March 2026" "" "Git Extras"
+.SH "NAME"
+\fBgit\-recent\-committers\fR \- show committers who made commits in the last N days
+.SH "SYNOPSIS"
+git\-recent\-committers
+.SH "DESCRIPTION"
+Shows authors who made at least one commit in the last N days, together with the number of commits they made in that period\.
 .P
-git\-recent\-committers \- show committers who made commits in the last N daysgit recent\-committersShows authors who made at least one commit in the last N days, together with the number of commits they made in that period\.
+The default number of days can be controlled with the GIT_RECENT_COMMITTERS_DAYS environment variable\.
+.SH "EXAMPLES"
+git recent\-committers
 .P
-The default number of days can be controlled with the \fBGIT_RECENT_COMMITTERS_DAYS\fR environment variable\.\fBgit recent\-committers\fR
-.P
-\fBGIT_RECENT_COMMITTERS_DAYS=30 git recent\-committers\fR
+GIT_RECENT_COMMITTERS_DAYS=30 git recent\-committers
+.SH "AUTHOR"
+Written by Salem
+.SH "REPORTING BUGS"
+https://github\.com/tj/git\-extras/issues
+.SH "SEE ALSO"
+https://github\.com/tj/git\-extras
