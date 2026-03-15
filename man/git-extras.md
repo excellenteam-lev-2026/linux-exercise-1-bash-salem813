@@ -78,7 +78,7 @@ git-extras(1) -- Awesome GIT utilities
    - **git-pull-request(1)** Create pull request for GitHub project
    - **git-reauthor(1)** Rewrite history to change author's identity
    - **git-rebase-patch(1)** Rebases a patch
-   - **% git-recent-committers(1)
+   - **git-recent-committers(1)** show committers who made commits in the last N days
    - **git-release(1)** Commit, tag and push changes to the repository
    - **git-rename-branch(1)** rename local branch and push to remote
    - **git-rename-file(1)** Rename a file or directory and ensure Git recognizes the change, regardless of filesystem case-sensitivity.
